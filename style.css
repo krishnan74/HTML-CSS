@@ -89,7 +89,6 @@ header p {
   font-size: 1rem;
   opacity: 0.8;
 }
-
 nav {
   background: #f0f0f0;
   color: #333;
@@ -97,18 +96,89 @@ nav {
   text-align: center;
   border-radius: 5px;
   margin-top: 10px;
+  position: relative;
 }
 
-nav a {
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  position: relative;
+  margin: 0 15px;
+}
+
+nav ul li a {
   color: #333;
   text-decoration: none;
-  margin: 0 15px;
   font-weight: bold;
+  padding: 10px 20px;
+  display: block;
   transition: color 0.3s ease;
 }
 
-nav a:hover {
+nav ul li a:hover {
   color: #666;
+}
+
+nav ul li ul.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 10px 0;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+nav ul li:hover ul.submenu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+nav ul li ul.submenu li {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li ul.submenu li a {
+  padding: 10px 20px;
+  color: #333;
+}
+
+nav ul li ul.submenu li a:hover {
+  background: #f0f0f0;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav ul li ul.submenu {
+    position: static;
+    box-shadow: none;
+  }
+
+  nav ul li a {
+    padding: 10px 15px;
+  }
 }
 
 main,
