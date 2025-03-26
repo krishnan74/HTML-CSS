@@ -1,0 +1,81 @@
+#contact-modal {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+#contact-modal:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+#contact-modal .modal {
+  opacity: 0;
+  transform: translateY(-1rem);
+  transition: all 0.3s;
+  transition-delay: 0.2s;
+}
+
+#contact-modal:target .modal {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #000;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.modal-text {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.modal-container {
+  z-index: 100;
+  border: 1px solid #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+  z-index: 100;
+  border: 1px solid #000;
+  background-color: white;
+  width: 80%;
+  max-width: 500px;
+  padding: 2rem;
+  border-radius: 8px;
+}

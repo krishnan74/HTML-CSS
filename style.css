@@ -185,6 +185,7 @@ main,
 section {
   margin: 20px 0;
   padding: 25px;
+  height: fit-content;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
