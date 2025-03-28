@@ -6,6 +6,8 @@
     <title>Static Webpage Layout</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="modal.css" />
+    <link rel="stylesheet" href="tabs.css" />
+    <link rel="stylesheet" href="tab-content.css" />
   </head>
   <body>
     <header>
@@ -52,6 +54,161 @@
         teams. Enthusiastic and creative-minded developer known for rapid
         learning and innovation.
       </p>
+
+      <div class="tabs">
+
+        <input type="radio" name="tabs" id="tab1" class="tab-input" checked />
+        <input type="radio" name="tabs" id="tab2" class="tab-input" />
+        <input type="radio" name="tabs" id="tab3" class="tab-input" />
+
+    
+        <div class="tab-labels">
+          <label for="tab1" class="tab-label">Experience</label>
+          <label for="tab2" class="tab-label">Skills</label>
+          <label for="tab3" class="tab-label">Education</label>
+        </div>
+
+
+        <div class="tab-content tab-content-1">
+          <h3>Professional Experience</h3>
+          <div class="experience">
+            <h4>Crafted With Love</h4>
+            <p class="date">Aug 2024 - Oct 2024</p>
+            <p class="location">Remote</p>
+            <p class="position">Software Developer Intern</p>
+            <ul>
+              <li>
+                Contributed to the development and enhancement of the company's
+                eCommerce fashion platform, AlienWardrobe
+              </li>
+              <li>
+                Revamped the site using Next.js, improving performance and user
+                experience
+              </li>
+              <li>
+                Developed API routes and configured database schemas with Prisma
+                to optimize data management
+              </li>
+              <li>
+                Gained hands-on experience with Amazon AWS for database
+                management and deployment
+              </li>
+            </ul>
+          </div>
+          <div class="experience">
+            <h4>OpenWeaver</h4>
+            <p class="date">Feb 2024 - Mar 2024</p>
+            <p class="location">Chennai, India</p>
+            <p class="position">OpenWeaver Studio Developer Intern</p>
+            <ul>
+              <li>
+                Utilized OpenWeaver Studio, a low-code platform, to design and
+                develop customized websites for a diverse client base
+              </li>
+              <li>
+                Collaborated directly with clients to gather requirements,
+                ensuring solutions were tailored to meet their specific needs
+              </li>
+              <li>
+                Delivered high-quality, client-focused websites, leading to
+                increased satisfaction and successful project outcomes
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tab-content tab-content-2">
+          <h3>Technical Skills</h3>
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h4>Programming Languages</h4>
+              <ul>
+                <li>Java</li>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>TypeScript</li>
+                <li>Solidity</li>
+                <li>Dart</li>
+                <li>C#</li>
+                <li>SQL</li>
+                <li>Cairo</li>
+                <li>GraphQL</li>
+              </ul>
+            </div>
+            <div class="skill-category">
+              <h4>Full Stack Development</h4>
+              <ul>
+                <li>React.js</li>
+                <li>Next.js</li>
+                <li>Flutter</li>
+                <li>TailwindCSS</li>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>Django</li>
+                <li>Flask</li>
+                <li>Prisma</li>
+                <li>Supabase</li>
+                <li>MongoDB</li>
+              </ul>
+            </div>
+            <div class="skill-category">
+              <h4>Blockchain Development</h4>
+              <ul>
+                <li>Solidity</li>
+                <li>Ethers.js</li>
+                <li>Remix IDE</li>
+                <li>ChainLink</li>
+                <li>The Graph</li>
+                <li>Galadriel</li>
+                <li>Farcaster Frames</li>
+                <li>Hardhat</li>
+                <li>Web3.js</li>
+                <li>Starknet</li>
+                <li>Mina Protocol</li>
+                <li>Pinata</li>
+                <li>Priv.io</li>
+              </ul>
+            </div>
+            <div class="skill-category">
+              <h4>Technologies and Concepts</h4>
+              <ul>
+                <li>AWS Amplify</li>
+                <li>Unity</li>
+                <li>Figma</li>
+                <li>Adobe XD</li>
+                <li>Blender</li>
+                <li>Postman</li>
+                <li>Git</li>
+                <li>DBMS</li>
+                <li>UI/UX</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content tab-content-3">
+          <h3>Education</h3>
+          <div class="education">
+            <h4>B.Tech/IT (8.45 CGPA)</h4>
+            <p class="institution">
+              Loyola ICAM College of Engineering and Technology (LICET), Chennai
+            </p>
+            <p class="">2021 - PRESENT</p>
+          </div>
+          <div class="education">
+            <h4>HSC (92%)</h4>
+            <p class="institution">
+              Jaigopal Garodia Matric. Hr. Sec. School, S.R.P. Colony, Chennai
+            </p>
+            <p class="">2019 - 2021</p>
+          </div>
+          <div class="education">
+            <h4>SSLC (90%)</h4>
+            <p class="institution">Ponnuswamy Matric. Hr. Sec. School</p>
+            <p class="">MAY 2018</p>
+          </div>
+        </div>
+      </div>
     </main>
 
     <section id="projects">
