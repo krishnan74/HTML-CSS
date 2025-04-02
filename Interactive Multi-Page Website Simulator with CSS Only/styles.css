@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.navbar {
+  background-color: #333;
+  padding: 10px;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style-type: none;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+.navbar a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+.page {
+  display: none;
+  padding: 20px;
+  height: 100%;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+:target {
+  display: block;
+  opacity: 1;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.navbar a:focus {
+  background-color: #444;
+  border-radius: 5px;
+}
+
+.page h1 {
+  font-size: 2em;
+  text-align: center;
+}
+
+.page p {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+.page {
+  height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page:not(:target) {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+  }
+
+  .navbar a {
+    padding: 15px;
+    text-align: center;
+  }
+}
