@@ -1,0 +1,84 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: lightblue;
+  color: black;
+}
+
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+#modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 300px;
+}
+
+#modal-checkbox {
+  display: none;
+}
+
+#modal-checkbox:checked + #modal {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.close-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+/* Zoomed-in */
+@media (max-resolution: 120dpi) {
+  body {
+    background-color: lightcoral;
+  }
+}
+
+/* Slightly zoomed-in */
+@media (min-resolution: 121dpi) and (max-resolution: 125dpi) {
+  body {
+    background-color: lightpink;
+  }
+}
+
+/* Normal zoom level */
+@media (min-resolution: 126dpi) and (max-resolution: 130dpi) {
+  body {
+    background-color: lightgreen;
+  }
+}
+
+/* Slightly zoomed-out */
+@media (min-resolution: 131dpi) and (max-resolution: 135dpi) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+/* Zoomed-out */
+@media (min-resolution: 136dpi) {
+  body {
+    background-color: lightgoldenrodyellow;
+  }
+}
