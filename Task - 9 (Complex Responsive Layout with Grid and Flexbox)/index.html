@@ -5,20 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Complex Responsive Layout with Grid and Flexbox</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
   </head>
   <body>
-    <header class="header">Header</header>
+    <a href="#sidebar" class="menu-toggle" id="menuToggle">
+      <i class="fas fa-bars"></i>
+    </a>
+
+    <header class="header">
+      <h1>My Website</h1>
+    </header>
 
     <div class="main-layout">
-      <aside class="sidebar">Sidebar</aside>
+      <aside class="sidebar" id="sidebar">
+        <a href="#" class="close-sidebar">
+          <i class="fas fa-times"></i>
+        </a>
+        <nav>
+          <ul>
+            <li>
+              <a><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li>
+              <a><i class="fas fa-user"></i> About</a>
+            </li>
+            <li>
+              <a><i class="fas fa-envelope"></i> Contact</a>
+            </li>
+            <li>
+              <a><i class="fas fa-cog"></i> Settings</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
 
       <main class="content">
-        <section class="section1">Section 1</section>
-        <section class="section2">Section 2</section>
-        <section class="section3">Section 3</section>
+        <section class="sectionDiv">Section 1</section>
+        <section class="sectionDiv">Section 2</section>
+        <section class="sectionDiv">Section 3</section>
       </main>
     </div>
-
-    <footer class="footer">Footer</footer>
   </body>
 </html>
